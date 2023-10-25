@@ -48,19 +48,7 @@ id="scene">
 				 }
 			});
 		</script>
-<script>
-			AFRAME.registerComponent('brainhandler', {
-				tick: function () {
-					   var entity = document.querySelector('[sound1]');
-					 if (document.querySelector('a-marker').object3D.visible == true) {
-						entity.components.sound.playSound();
-					} else {
-						entity.components.sound.pauseSound();
-					}
 
-				 }
-			});
-		</script>
 </body>
 </body>
 </html>
