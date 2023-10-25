@@ -17,6 +17,7 @@ id="scene">
  <a-asset-item id="modelo" src="brain_areas (1).glb"></a-asset-item>
 <a-asset-item id="modelo2" src="shiba.glb"></a-asset-item> 
 <audio id="sound" src="TextTo.mp3" preload="auto"></audio>
+<audio id="sound1" src="TextTo.mp3" preload="auto"></audio>
  </a-assets>
 <a-marker type="barcode" value="9" raycaster="objects: .clickable" emitevents="true"
  cursor="fuse: false; rayOrigin: mouse;">
@@ -27,7 +28,7 @@ id="scene">
  <a-marker type="barcode" value="5" raycaster="objects: .clickable" emitevents="true"
  cursor="fuse: false; rayOrigin: mouse;">
  <a-entity
- gltf-model="#modelo2" scale="2 2 2" class="clickable" gesture-handler soundhandler >
+ gltf-model="#modelo2" scale="2 2 2" class="clickable" gesture-handler soundbrain>
  </a-entity>
  </a-marker>
 <a-entity sound="src: #sound" autoplay="false"></a-entity>
@@ -46,5 +47,19 @@ id="scene">
 				 }
 			});
 		</script>
+<script>
+			AFRAME.registerComponent('soundbrain', {
+				tick: function () {
+					   var entity = document.querySelector('[sound1]');
+					 if (document.querySelector('a-marker').object3D.visible == true) {
+						entity.components.sound.playSound();
+					} else {
+						entity.components.sound.pauseSound();
+					}
+
+				 }
+			});
+		</script>
+</body>
 </body>
 </html>
