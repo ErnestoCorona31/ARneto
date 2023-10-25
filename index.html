@@ -30,10 +30,10 @@ id="scene">
  gltf-model="#modelo2" scale="2 2 2" class="clickable" gesture-handler soundhandler>
  </a-entity>
  </a-marker>
+<a-entity sound="src: #sound" autoplay="false"></a-entity>
 <a-entity camera></a-entity>
 </a-scene>
- <script>
-  
+<script>
 			AFRAME.registerComponent('soundhandler', {
 				tick: function () {
 					   var entity = document.querySelector('[sound]');
