@@ -16,8 +16,8 @@ id="scene">
  <a-assets>
  <a-asset-item id="modelo" src="brain_areas (1).glb"></a-asset-item>
 <a-asset-item id="modelo2" src="shiba.glb"></a-asset-item> 
-<audio id="sound" src="TextTo.mp3" preload="auto"></audio>
-<audio id="sound2" src="Cerebro.mp3" preload="auto"></audio>
+<audio id="sound" src="Cerebro.mp3" preload="auto"></audio>
+<audio id="sound2" src="TextTo.mp3" preload="auto"></audio>
  </a-assets>
 <a-marker id="cerebro" type="barcode" value="9" raycaster="objects: .clickable" emitevents="true"
  cursor="fuse: false; rayOrigin: mouse;">
@@ -34,7 +34,6 @@ id="scene">
 <a-entity id="audio1" sound="src: #sound" autoplay="false"></a-entity>
 <a-entity id="audio2"  sound="src: #sound2" autoplay="false"></a-entity>
 <a-entity camera></a-entity>
-</a-scene>
 <script>
     AFRAME.registerComponent('soundhandler', {
     tick: function () {
@@ -57,5 +56,6 @@ id="scene">
     }
     });
     </script>
+</a-scene>
 </body>
 </html>
